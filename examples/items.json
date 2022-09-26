@@ -1,0 +1,746 @@
+[
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Kitchencontrol_BatteryLevel",
+    "state": "87.0",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 100,
+      "step": 1,
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "Kitchencontrol_BatteryLevel",
+    "label": "Battery Level",
+    "category": "Battery",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Livingroom_Setpoint",
+    "state": "12 °C",
+    "stateDescription": {
+      "minimum": 7,
+      "maximum": 30,
+      "step": 0.5,
+      "pattern": "%.1f %unit%",
+      "readOnly": false,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Temperature",
+    "name": "Livingroom_Setpoint",
+    "label": "Setpoint",
+    "category": "Temperature",
+    "tags": [
+      "Temperature",
+      "Setpoint"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_OutdoorTemperature",
+    "state": "12.4 °C",
+    "stateDescription": {
+      "pattern": "%.1f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Temperature",
+    "name": "OneCallAPIWeatherandForecast_OutdoorTemperature",
+    "label": "Outdoor Temperature",
+    "category": "Temperature",
+    "tags": [
+      "Measurement",
+      "Temperature"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_WindSpeed",
+    "state": "7.416 km/h",
+    "stateDescription": {
+      "pattern": "%.1f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Speed",
+    "name": "OneCallAPIWeatherandForecast_WindSpeed",
+    "label": "Wind Speed",
+    "category": "Wind",
+    "tags": [
+      "Measurement",
+      "Wind"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_WindDirection",
+    "state": "100 °",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 360,
+      "pattern": "%.0f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Angle",
+    "name": "OneCallAPIWeatherandForecast_WindDirection",
+    "label": "Wind Direction",
+    "category": "Wind",
+    "tags": [
+      "Measurement",
+      "Wind"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/LivingRoom_Valve_BatteryLevel",
+    "state": "100",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 100,
+      "step": 1,
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "LivingRoom_Valve_BatteryLevel",
+    "label": "Battery Level",
+    "category": "Battery",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/LivingRoom_IndoorTemperature",
+    "state": "19.3 °C",
+    "stateDescription": {
+      "pattern": "%.1f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Temperature",
+    "name": "LivingRoom_IndoorTemperature",
+    "label": "Indoor Temperature",
+    "category": "Temperature",
+    "tags": [
+      "Measurement",
+      "Temperature"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Office_IndoorTemperature",
+    "state": "23.6 °C",
+    "stateDescription": {
+      "pattern": "%.1f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Temperature",
+    "name": "Office_IndoorTemperature",
+    "label": "Indoor Temperature",
+    "category": "Temperature",
+    "tags": [
+      "Measurement",
+      "Temperature"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/LivingRoom_Noise",
+    "state": "41 dB",
+    "stateDescription": {
+      "pattern": "%d %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "LivingRoom_Noise",
+    "label": "Noise",
+    "category": "SoundVolume",
+    "tags": [
+      "Measurement",
+      "Noise"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/LivingRoom_CO2",
+    "state": "487 ppm",
+    "stateDescription": {
+      "pattern": "%d %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "LivingRoom_CO2",
+    "label": "CO2",
+    "category": "Carbondioxide",
+    "tags": [
+      "Measurement",
+      "CO2"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Livingroom_HeatingPower",
+    "state": "0 %",
+    "stateDescription": {
+      "pattern": "%.0f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "Livingroom_HeatingPower",
+    "label": "Heating Power",
+    "category": "Energy",
+    "tags": [
+      "Opening",
+      "Point"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/PlayStationPlug_OnOff",
+    "state": "ON",
+    "editable": true,
+    "type": "Switch",
+    "name": "PlayStationPlug_OnOff",
+    "label": "Power",
+    "category": "Switch",
+    "tags": [
+      "Switch",
+      "Power"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroom_Valve_BatteryLevel",
+    "state": "100",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 100,
+      "step": 1,
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "Bedroom_Valve_BatteryLevel",
+    "label": "Battery Level",
+    "category": "Battery",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/LivingRoomControl_BatteryLevel",
+    "state": "NULL",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 100,
+      "step": 1,
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "LivingRoomControl_BatteryLevel",
+    "label": "Battery Level",
+    "category": "Battery",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Office_BarometricPressure",
+    "state": "1049 hPa",
+    "stateDescription": {
+      "pattern": "%.3f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Pressure",
+    "name": "Office_BarometricPressure",
+    "label": "Barometric Pressure",
+    "category": "Pressure",
+    "tags": [
+      "Measurement",
+      "Pressure"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_Visibility",
+    "state": "10 km",
+    "stateDescription": {
+      "pattern": "%.1f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Length",
+    "name": "OneCallAPIWeatherandForecast_Visibility",
+    "label": "Visibility",
+    "category": "",
+    "tags": [
+      "Measurement"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Office_AtmosphericHumidity",
+    "state": "41 %",
+    "stateDescription": {
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "Office_AtmosphericHumidity",
+    "label": "Atmospheric Humidity",
+    "category": "Humidity",
+    "tags": [
+      "Measurement",
+      "Humidity"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroom_AtmosphericHumidity",
+    "state": "50 %",
+    "stateDescription": {
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "Bedroom_AtmosphericHumidity",
+    "label": "Atmospheric Humidity",
+    "category": "Humidity",
+    "tags": [
+      "Measurement",
+      "Humidity"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_Snow",
+    "state": "0 mm",
+    "stateDescription": {
+      "pattern": "%.2f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Length",
+    "name": "OneCallAPIWeatherandForecast_Snow",
+    "label": "Snow",
+    "category": "Snow",
+    "tags": [
+      "Measurement"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/PlayStationPlug_EnergyUsage",
+    "state": "3.078 kWh",
+    "stateDescription": {
+      "pattern": "%.2f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Energy",
+    "name": "PlayStationPlug_EnergyUsage",
+    "label": "Energy Usage",
+    "category": "Energy",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_AtmosphericHumidity",
+    "state": "59 %",
+    "stateDescription": {
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "OneCallAPIWeatherandForecast_AtmosphericHumidity",
+    "label": "Atmospheric Humidity",
+    "category": "Humidity",
+    "tags": [
+      "Measurement",
+      "Humidity"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/WorkRoom_AtmosphericHumidity",
+    "state": "46 %",
+    "stateDescription": {
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "WorkRoom_AtmosphericHumidity",
+    "label": "Atmospheric Humidity",
+    "category": "Humidity",
+    "tags": [
+      "Measurement",
+      "Humidity"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/WorkRoom_BatteryLevel",
+    "state": "40",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 100,
+      "step": 1,
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "WorkRoom_BatteryLevel",
+    "label": "Battery Level",
+    "category": "Battery",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroom_HeatingPower",
+    "state": "0 %",
+    "stateDescription": {
+      "pattern": "%.0f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "Bedroom_HeatingPower",
+    "label": "Heating Power",
+    "category": "Energy",
+    "tags": [
+      "Opening",
+      "Point"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroom_BatteryLevel",
+    "state": "65",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 100,
+      "step": 1,
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "Bedroom_BatteryLevel",
+    "label": "Battery Level",
+    "category": "Battery",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_Rain",
+    "state": "0 mm",
+    "stateDescription": {
+      "pattern": "%.2f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Length",
+    "name": "OneCallAPIWeatherandForecast_Rain",
+    "label": "Rain",
+    "category": "Rain",
+    "tags": [
+      "Measurement",
+      "Rain"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/WorkRoom_CO2",
+    "state": "625 ppm",
+    "stateDescription": {
+      "pattern": "%d %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "WorkRoom_CO2",
+    "label": "CO2",
+    "category": "Carbondioxide",
+    "tags": [
+      "Measurement",
+      "CO2"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_BarometricPressure",
+    "state": "1017 hPa",
+    "stateDescription": {
+      "pattern": "%.3f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Pressure",
+    "name": "OneCallAPIWeatherandForecast_BarometricPressure",
+    "label": "Barometric Pressure",
+    "category": "Pressure",
+    "tags": [
+      "Measurement",
+      "Pressure"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_UVIndex",
+    "state": "0.0",
+    "stateDescription": {
+      "pattern": "%.1f",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "OneCallAPIWeatherandForecast_UVIndex",
+    "label": "UV Index",
+    "category": "",
+    "tags": [
+      "Measurement",
+      "Ultraviolet"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/WorkRoom_IndoorTemperature",
+    "state": "19.7 °C",
+    "stateDescription": {
+      "pattern": "%.1f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Temperature",
+    "name": "WorkRoom_IndoorTemperature",
+    "label": "Indoor Temperature",
+    "category": "Temperature",
+    "tags": [
+      "Measurement",
+      "Temperature"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroom_IndoorTemperature",
+    "state": "18.9 °C",
+    "stateDescription": {
+      "pattern": "%.1f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Temperature",
+    "name": "Bedroom_IndoorTemperature",
+    "label": "Indoor Temperature",
+    "category": "Temperature",
+    "tags": [
+      "Measurement",
+      "Temperature"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroom_CO2",
+    "state": "552 ppm",
+    "stateDescription": {
+      "pattern": "%d %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "Bedroom_CO2",
+    "label": "CO2",
+    "category": "Carbondioxide",
+    "tags": [
+      "Measurement",
+      "CO2"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroomcontrol_BatteryLevel",
+    "state": "NULL",
+    "stateDescription": {
+      "minimum": 0,
+      "maximum": 100,
+      "step": 1,
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number",
+    "name": "Bedroomcontrol_BatteryLevel",
+    "label": "Battery Level",
+    "category": "Battery",
+    "tags": [
+      "Measurement",
+      "Energy"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Bedroom_Setpoint",
+    "state": "12 °C",
+    "stateDescription": {
+      "minimum": 7,
+      "maximum": 30,
+      "step": 0.5,
+      "pattern": "%.1f %unit%",
+      "readOnly": false,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Temperature",
+    "name": "Bedroom_Setpoint",
+    "label": "Setpoint",
+    "category": "Temperature",
+    "tags": [
+      "Temperature",
+      "Setpoint"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/LivingRoom_BarometricPressure",
+    "state": "1017 hPa",
+    "stateDescription": {
+      "pattern": "%.3f %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Pressure",
+    "name": "LivingRoom_BarometricPressure",
+    "label": "Barometric Pressure",
+    "category": "Pressure",
+    "tags": [
+      "Measurement",
+      "Pressure"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Office_Noise",
+    "state": "36 dB",
+    "stateDescription": {
+      "pattern": "%d %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "Office_Noise",
+    "label": "Noise",
+    "category": "SoundVolume",
+    "tags": [
+      "Measurement",
+      "Noise"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/Office_CO2",
+    "state": "563 ppm",
+    "stateDescription": {
+      "pattern": "%d %unit%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "Office_CO2",
+    "label": "CO2",
+    "category": "Carbondioxide",
+    "tags": [
+      "Measurement",
+      "CO2"
+    ],
+    "groupNames": []
+  },
+  {
+    "link": "http://192.168.0.150:8080/rest/items/LivingRoom_AtmosphericHumidity",
+    "state": "46 %",
+    "stateDescription": {
+      "pattern": "%.0f %%",
+      "readOnly": true,
+      "options": []
+    },
+    "editable": true,
+    "type": "Number:Dimensionless",
+    "name": "LivingRoom_AtmosphericHumidity",
+    "label": "Atmospheric Humidity",
+    "category": "Humidity",
+    "tags": [
+      "Measurement",
+      "Humidity"
+    ],
+    "groupNames": []
+  }
+]
