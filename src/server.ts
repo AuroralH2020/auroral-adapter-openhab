@@ -1,8 +1,10 @@
 import errorHandler from 'errorhandler'
 import stoppable from 'stoppable'
+import { mapping } from './core/auroralMapping'
 import { app } from './app'
 import { Config } from './config'
 import { logger, errorHandler as eH } from './utils'
+import { initLoad } from './core/main'
 
 /**
  * Error Handler. Provides full stack - only in dev
@@ -20,12 +22,7 @@ async function bootstrap () {
     logger.info('##############################################')
     logger.info('##############################################')
     logger.info('Starting AURORAL Openhab adapter!!')
-    // await Token.start()
-    // logger.info(await nm.handshake())
-    // initialize(Config.GATEWAY.ID, Config.GATEWAY.PASSWORD)
-    // await startXMPPClient(Config.GATEWAY.ID)
-    // events.loadEventChannelsFromFile()
-    // await Registrations.start()
+    await mapping.loadFromFS()
     logger.info('##############################################')
     logger.info('##############################################')
   } catch (err: unknown) {
@@ -50,6 +47,7 @@ function startServer() {
     // Server started
     logger.info(
       `  App is running at ${app.get('ip')}:${app.get('port')} in ${app.get('env')} mode`)
+      initLoad()
     logger.info(`  App root path is ${Config.HOME_PATH}`)
     logger.info('  Press CTRL-C to stop\n')
     bootstrap()

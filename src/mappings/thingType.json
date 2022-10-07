@@ -1,0 +1,19 @@
+{
+    "tradfri:0100": "Relay",
+    "tradfri:0220": "Lightbulb",
+    "tradfri:0820": "Switch",
+    "tradfri:0830": "Switch",
+    "openweathermap:onecall":"Weather",
+    "netatmo:room": "Thermometer",
+    "netatmo:home-coach": "MonitoringSensor",
+    "netatmo:home": "MonitoringSensor",
+    "netatmo:valve": "Valve",
+    "tplinksmarthome:hs110": "PowerOutlet",
+    "netatmo:plug": "PowerOutlet",
+    "netatmo:indoor": "Thermometer",
+    "netatmo:account": "MonitoringSensor",
+    "netatmo:outdoor": "Thermometer",
+    "netatmo:weather-station": "Thermometer",
+    "tradfri:gateway": "Gateway",
+    "openweathermap:weather-api": "Gateway"
+}

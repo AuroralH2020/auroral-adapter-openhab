@@ -1,12 +1,10 @@
 // Controller common imports
 import { expressTypes } from '../types/index'
-import { HttpStatusCode } from '../utils/http-status-codes'
-import { logger, errorHandler } from '../utils'
-import { responseBuilder } from '../utils/response-builder'
+import { logger, errorHandler, MyError } from '../utils'
 
 // Imports
-import { loadItems } from '../core/items'
 import { Property } from '../core/td-class'
+import { getPropertyValue } from '../core/items'
 
 // Controllers
 
@@ -16,15 +14,19 @@ type wotTD = {
         properties: { [x: string]: Property } 
 }
 
-type getItemsCtrl = expressTypes.Controller<{}, {}, {}, (wotTD | undefined)[], any>
-
-export const getItems: getItemsCtrl = async (_req, res) => {
-    try {
-        const items = await loadItems()
-        return responseBuilder(HttpStatusCode.OK, res, null, items)
-	} catch (err) {
-        const error = errorHandler(err)
-        logger.error(error.message)
-        return responseBuilder(error.status, res, error.message)
-	}
-}
+type getPropertyController = expressTypes.Controller<{ oid: string, pid: string }, {}, {}, any, {}>
+// TBD fix typing
+export const getProperty: getPropertyController = async (req, res) => {
+        try {
+                const { oid, pid } = req.params
+                const value = await getPropertyValue(oid, pid)
+                console.log(value)
+                res.status(200).json(value)
+        } catch (err) {
+                const error = errorHandler(err)
+                logger.error(error.message)
+                res.status(200).json({ 'error': error.message })
+                return {}
+                // return responseBuilder(error.status, res, error.message)
+        }
+        }

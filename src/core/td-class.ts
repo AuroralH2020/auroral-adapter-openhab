@@ -1,11 +1,29 @@
 // Thing Description Class
 import { OHItem, OHType, OHProperty, OHSemantics } from '../types/openhab-types'
 import { logger } from '../utils'
+import { mapping } from './auroralMapping'
 
-type wotTD = { 
+export type wotTD = { 
     adapterId: string, 
-    name: string, 
-    properties: { [x: string]: Property } 
+    '@context': string[]
+    title: string, 
+    properties: { [x: string]: WotProperty } 
+    '@type': string
+    security: string[]
+    securityDefinitions: any
+}
+
+export type WotProperty = {
+    title: string
+    type?: string
+    monitors: string
+    measures?: string
+    forms?: { 
+        op: string[],
+        href: string
+    }[]
+    // To Be Updated
+    readOnly?: boolean
 }
 
 export type Property = {
@@ -28,13 +46,21 @@ export type Property = {
 
 export class TD {
     readonly adapterId: string
+    public type: string
     public name: string
+    public oid: string | undefined 
     public propertiesMap = new Map<string, Property>()
    
     // Creating event channel
-    constructor(adapterId: string, name: string) {
-      this.adapterId = adapterId
-      this.name = name
+    constructor(adapterId: string, name: string, thingTypeUID?: string) {
+        this.adapterId = adapterId
+        this.name = name
+        this.type = 'Device'
+        // Get type using auroral mapping
+        if (thingTypeUID) {
+            const auroralMapping = mapping.typeMapping.get(thingTypeUID)
+            this.type = auroralMapping ? auroralMapping : 'Device'
+        } 
     }
 
     public addProperty(item: OHItem) {
@@ -63,13 +89,14 @@ export class TD {
                 semantics.add(item.category)
             }
             prop.tags = item.tags.concat(Array.from(semantics))
-            console.log(prop.tags)
+            // console.log(prop.tags)
+            // TBD PETER
             for (const it of semantics) {
-                if (it in OHProperty) {
-                    prop.monitors = it
+                if (mapping.propertyMapping.has(it)) {
+                    prop.monitors = mapping.propertyMapping.get(it)!
                 }
                 if (it in OHType) {
-                    prop.type = it
+                    prop.type = it.toLowerCase()
                 }
             }
             // readonly?
@@ -90,26 +117,21 @@ export class TD {
     }
 
     // Extract valid property according WoT standard
-    public getWoTProperties(): {
-        [x: string]: Property
-    } {
-        const properties: {
-            [x: string]: Property
-        } = {}
-        console.log(this.propertiesMap.keys())
+    public getWoTProperties(): { [x: string]: WotProperty } {
+        const properties: {[x: string]: WotProperty} = {}
+        // console.log(this.propertiesMap.keys())
         for (const key of this.propertiesMap.keys()) {
             const prop = this.propertiesMap.get(key)
             if (prop) {
                 properties[key] = {
-                    pid: prop.pid,
-                    name: prop.name,
+                    title: prop.name,
                     type: prop.type, 
                     monitors: prop.monitors,
                     measures: prop.measures,
-                    form: { 
+                    forms: [{ 
                         op: prop.form.op,
                         href: prop.form.href
-                    }
+                    }]
                 }
             }
         }
@@ -120,8 +142,20 @@ export class TD {
     public returnTD (): wotTD {
         return {
             adapterId: this.adapterId,
-            name: this.name,
-            properties: this.getWoTProperties()
+            '@context': [
+                'https://www.w3.org/2019/wot/td/v1',
+                'https://w3c.github.io/wot-discovery/context/discovery-context.jsonld'
+            ], 
+            title: this.name,
+            '@type': this.type,
+            security: ['nosec_sc'],
+            securityDefinitions: {
+                'nosec_sc': {
+                    'scheme': 'nosec'
+                  }
+            },
+            properties: this.getWoTProperties(),
+            
         }
     }
 }
