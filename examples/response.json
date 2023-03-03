@@ -1,0 +1,541 @@
+{
+    "error": false,
+    "statusCode": 200,
+    "statusCodeReason": "OK",
+    "contentType": "application/json",
+    "message": [
+        {
+            "adapterId": "tradfri:0830:gwa0c9a06770a7:65548",
+            "name": "Living Room Control",
+            "properties": {
+                "LivingRoomControl_BatteryLevel": {
+                    "pid": "LivingRoomControl_BatteryLevel",
+                    "name": "LivingRoomControl_BatteryLevel",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/LivingRoomControl_BatteryLevel/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "openweathermap:onecall:865a39d777:0b8cc465f7",
+            "name": "One Call API Weather and Forecast",
+            "properties": {
+                "OneCallAPIWeatherandForecast_OutdoorTemperature": {
+                    "pid": "OneCallAPIWeatherandForecast_OutdoorTemperature",
+                    "name": "OneCallAPIWeatherandForecast_OutdoorTemperature",
+                    "type": "Number",
+                    "monitors": "Temperature",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_OutdoorTemperature/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_BarometricPressure": {
+                    "pid": "OneCallAPIWeatherandForecast_BarometricPressure",
+                    "name": "OneCallAPIWeatherandForecast_BarometricPressure",
+                    "type": "Number",
+                    "monitors": "Pressure",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_BarometricPressure/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_AtmosphericHumidity": {
+                    "pid": "OneCallAPIWeatherandForecast_AtmosphericHumidity",
+                    "name": "OneCallAPIWeatherandForecast_AtmosphericHumidity",
+                    "type": "Number",
+                    "monitors": "Humidity",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_AtmosphericHumidity/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_UVIndex": {
+                    "pid": "OneCallAPIWeatherandForecast_UVIndex",
+                    "name": "OneCallAPIWeatherandForecast_UVIndex",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_UVIndex/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_WindSpeed": {
+                    "pid": "OneCallAPIWeatherandForecast_WindSpeed",
+                    "name": "OneCallAPIWeatherandForecast_WindSpeed",
+                    "type": "Number",
+                    "monitors": "Wind",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_WindSpeed/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_WindDirection": {
+                    "pid": "OneCallAPIWeatherandForecast_WindDirection",
+                    "name": "OneCallAPIWeatherandForecast_WindDirection",
+                    "type": "Number",
+                    "monitors": "Wind",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_WindDirection/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_Rain": {
+                    "pid": "OneCallAPIWeatherandForecast_Rain",
+                    "name": "OneCallAPIWeatherandForecast_Rain",
+                    "type": "Number",
+                    "monitors": "Rain",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_Rain/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_Snow": {
+                    "pid": "OneCallAPIWeatherandForecast_Snow",
+                    "name": "OneCallAPIWeatherandForecast_Snow",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_Snow/state"
+                    }
+                },
+                "OneCallAPIWeatherandForecast_Visibility": {
+                    "pid": "OneCallAPIWeatherandForecast_Visibility",
+                    "name": "OneCallAPIWeatherandForecast_Visibility",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/OneCallAPIWeatherandForecast_Visibility/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:room:42b4f046b9:5ed51be1e790393e0ee9ebb2:3458329108",
+            "name": "Bedroom",
+            "properties": {
+                "Bedroom_Setpoint": {
+                    "pid": "Bedroom_Setpoint",
+                    "name": "Bedroom_Setpoint",
+                    "type": "Number",
+                    "monitors": "Temperature",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroom_Setpoint/state"
+                    }
+                },
+                "Bedroom_HeatingPower": {
+                    "pid": "Bedroom_HeatingPower",
+                    "name": "Bedroom_HeatingPower",
+                    "type": "Number",
+                    "monitors": "Energy",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroom_HeatingPower/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:home-coach:42b4f046b9:70ee50265cc6",
+            "name": "Office",
+            "properties": {
+                "Office_CO2": {
+                    "pid": "Office_CO2",
+                    "name": "Office_CO2",
+                    "type": "Number",
+                    "monitors": "CO2",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Office_CO2/state"
+                    }
+                },
+                "Office_Noise": {
+                    "pid": "Office_Noise",
+                    "name": "Office_Noise",
+                    "type": "Number",
+                    "monitors": "SoundVolume",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Office_Noise/state"
+                    }
+                },
+                "Office_IndoorTemperature": {
+                    "pid": "Office_IndoorTemperature",
+                    "name": "Office_IndoorTemperature",
+                    "type": "Number",
+                    "monitors": "Temperature",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Office_IndoorTemperature/state"
+                    }
+                },
+                "Office_AtmosphericHumidity": {
+                    "pid": "Office_AtmosphericHumidity",
+                    "name": "Office_AtmosphericHumidity",
+                    "type": "Number",
+                    "monitors": "Humidity",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Office_AtmosphericHumidity/state"
+                    }
+                },
+                "Office_BarometricPressure": {
+                    "pid": "Office_BarometricPressure",
+                    "name": "Office_BarometricPressure",
+                    "type": "Number",
+                    "monitors": "Pressure",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Office_BarometricPressure/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "tplinksmarthome:hs110:D5764D",
+            "name": "PlayStationPlug",
+            "properties": {
+                "PlayStationPlug_OnOff": {
+                    "pid": "PlayStationPlug_OnOff",
+                    "name": "PlayStationPlug_OnOff",
+                    "monitors": "Power",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/PlayStationPlug_OnOff/state"
+                    }
+                },
+                "PlayStationPlug_EnergyUsage": {
+                    "pid": "PlayStationPlug_EnergyUsage",
+                    "name": "PlayStationPlug_EnergyUsage",
+                    "type": "Number",
+                    "monitors": "Energy",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/PlayStationPlug_EnergyUsage/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:indoor:42b4f046b9:70ee505865fa:0300005a05a8",
+            "name": "Bedroom",
+            "properties": {
+                "Bedroom_IndoorTemperature": {
+                    "pid": "Bedroom_IndoorTemperature",
+                    "name": "Bedroom_IndoorTemperature",
+                    "type": "Number",
+                    "monitors": "Temperature",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroom_IndoorTemperature/state"
+                    }
+                },
+                "Bedroom_AtmosphericHumidity": {
+                    "pid": "Bedroom_AtmosphericHumidity",
+                    "name": "Bedroom_AtmosphericHumidity",
+                    "type": "Number",
+                    "monitors": "Humidity",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroom_AtmosphericHumidity/state"
+                    }
+                },
+                "Bedroom_CO2": {
+                    "pid": "Bedroom_CO2",
+                    "name": "Bedroom_CO2",
+                    "type": "Number",
+                    "monitors": "CO2",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroom_CO2/state"
+                    }
+                },
+                "Bedroom_BatteryLevel": {
+                    "pid": "Bedroom_BatteryLevel",
+                    "name": "Bedroom_BatteryLevel",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroom_BatteryLevel/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:indoor:42b4f046b9:70ee505865fa:0300000a1046",
+            "name": "Work Room",
+            "properties": {
+                "WorkRoom_IndoorTemperature": {
+                    "pid": "WorkRoom_IndoorTemperature",
+                    "name": "WorkRoom_IndoorTemperature",
+                    "type": "Number",
+                    "monitors": "Temperature",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/WorkRoom_IndoorTemperature/state"
+                    }
+                },
+                "WorkRoom_AtmosphericHumidity": {
+                    "pid": "WorkRoom_AtmosphericHumidity",
+                    "name": "WorkRoom_AtmosphericHumidity",
+                    "type": "Number",
+                    "monitors": "Humidity",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/WorkRoom_AtmosphericHumidity/state"
+                    }
+                },
+                "WorkRoom_CO2": {
+                    "pid": "WorkRoom_CO2",
+                    "name": "WorkRoom_CO2",
+                    "type": "Number",
+                    "monitors": "CO2",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/WorkRoom_CO2/state"
+                    }
+                },
+                "WorkRoom_BatteryLevel": {
+                    "pid": "WorkRoom_BatteryLevel",
+                    "name": "WorkRoom_BatteryLevel",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/WorkRoom_BatteryLevel/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:valve:42b4f046b9:5ed51be1e790393e0ee9ebb2:70ee5064a166:0900001599dd",
+            "name": "Bedroom",
+            "properties": {
+                "Bedroom_Valve_BatteryLevel": {
+                    "pid": "Bedroom_Valve_BatteryLevel",
+                    "name": "Bedroom_Valve_BatteryLevel",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroom_Valve_BatteryLevel/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "tradfri:0820:gwa0c9a06770a7:65543",
+            "name": "Kitchen control",
+            "properties": {
+                "Kitchencontrol_BatteryLevel": {
+                    "pid": "Kitchencontrol_BatteryLevel",
+                    "name": "Kitchencontrol_BatteryLevel",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Kitchencontrol_BatteryLevel/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:room:42b4f046b9:5ed51be1e790393e0ee9ebb2:3800146005",
+            "name": "Living room",
+            "properties": {
+                "Livingroom_Setpoint": {
+                    "pid": "Livingroom_Setpoint",
+                    "name": "Livingroom_Setpoint",
+                    "type": "Number",
+                    "monitors": "Temperature",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Livingroom_Setpoint/state"
+                    }
+                },
+                "Livingroom_HeatingPower": {
+                    "pid": "Livingroom_HeatingPower",
+                    "name": "Livingroom_HeatingPower",
+                    "type": "Number",
+                    "monitors": "Energy",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Livingroom_HeatingPower/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:valve:42b4f046b9:5ed51be1e790393e0ee9ebb2:70ee5064a166:0900000488a3",
+            "name": "Living Room",
+            "properties": {
+                "LivingRoom_Valve_BatteryLevel": {
+                    "pid": "LivingRoom_Valve_BatteryLevel",
+                    "name": "LivingRoom_Valve_BatteryLevel",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/LivingRoom_Valve_BatteryLevel/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "netatmo:weather-station:42b4f046b9:70ee505865fa",
+            "name": "Living Room",
+            "properties": {
+                "LivingRoom_BarometricPressure": {
+                    "pid": "LivingRoom_BarometricPressure",
+                    "name": "LivingRoom_BarometricPressure",
+                    "type": "Number",
+                    "monitors": "Pressure",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/LivingRoom_BarometricPressure/state"
+                    }
+                },
+                "LivingRoom_IndoorTemperature": {
+                    "pid": "LivingRoom_IndoorTemperature",
+                    "name": "LivingRoom_IndoorTemperature",
+                    "type": "Number",
+                    "monitors": "Temperature",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/LivingRoom_IndoorTemperature/state"
+                    }
+                },
+                "LivingRoom_Noise": {
+                    "pid": "LivingRoom_Noise",
+                    "name": "LivingRoom_Noise",
+                    "type": "Number",
+                    "monitors": "SoundVolume",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/LivingRoom_Noise/state"
+                    }
+                },
+                "LivingRoom_AtmosphericHumidity": {
+                    "pid": "LivingRoom_AtmosphericHumidity",
+                    "name": "LivingRoom_AtmosphericHumidity",
+                    "type": "Number",
+                    "monitors": "Humidity",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/LivingRoom_AtmosphericHumidity/state"
+                    }
+                },
+                "LivingRoom_CO2": {
+                    "pid": "LivingRoom_CO2",
+                    "name": "LivingRoom_CO2",
+                    "type": "Number",
+                    "monitors": "CO2",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/LivingRoom_CO2/state"
+                    }
+                }
+            }
+        },
+        {
+            "adapterId": "tradfri:0830:gwa0c9a06770a7:65539",
+            "name": "Bedroom control",
+            "properties": {
+                "Bedroomcontrol_BatteryLevel": {
+                    "pid": "Bedroomcontrol_BatteryLevel",
+                    "name": "Bedroomcontrol_BatteryLevel",
+                    "type": "Number",
+                    "monitors": "NA",
+                    "form": {
+                        "op": [
+                            "readproperty"
+                        ],
+                        "href": "http://192.168.0.150:8080/rest/items/Bedroomcontrol_BatteryLevel/state"
+                    }
+                }
+            }
+        }
+    ]
+}

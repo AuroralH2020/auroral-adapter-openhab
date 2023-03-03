@@ -26,7 +26,7 @@ export const getProperty: getPropertyController = async (req, res) => {
                 const error = errorHandler(err)
                 logger.error(error.message)
                 res.status(200).json({ 'error': error.message })
-                return {}
+                // return {}
                 // return responseBuilder(error.status, res, error.message)
         }
-        }
+}

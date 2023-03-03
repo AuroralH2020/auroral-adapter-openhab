@@ -17,9 +17,9 @@ class Mapping {
             this.propertyMapping.set(key, value as string)
         })
         // Load thingTypes
-        const typesObject = JSON.parse(fs.readFileSync(Config.HOME_PATH +  '/src/mappings/property.json', 'utf8'))
+        const typesObject = JSON.parse(fs.readFileSync(Config.HOME_PATH +  '/src/mappings/thingType.json', 'utf8'))
         Object.entries(typesObject).forEach(([key, value]) => {
-            this.propertyMapping.set(key, value as string)
+            this.typeMapping.set(key, value as string)
         })
     }
     public propertyMapping: Map<string, string> = new Map<string, string>()
