@@ -93,7 +93,7 @@ export class Thing {
 export interface ThingInteraction {
     title?: string
     titles?: MultiLanguage
-    measures?: string | string[] // AURORAL Extension
+    unit?: string | string[] // AURORAL Extension
     description?: string
     descriptions?: MultiLanguage
     scopes?: Array<string>

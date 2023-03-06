@@ -8,26 +8,26 @@ export const initLoad = async () => {
         logger.debug('Retrieving devices from openHAB')
         const items = await loadItems()
         // TBD check if agent is loaded
-        console.log('Monitored devices: ' + items.length)
+        logger.info('Monitored devices: ' + items.length)
         for (const item of items) {
             const oid = (await agent.getOidByAdapterId(item!.adapterId)).message
             if (oid) {
-                console.log('OID: ' + oid + '\t' +  item!.adapterId)
+                logger.debug('OID: ' + oid + '\t' +  item!.adapterId)
                 // Add to map
                 oidToAdapterId.set(oid, item!.adapterId)
             } else {
-                console.log('Registering device: ' +  item!.adapterId)
-                // TBD register device
+                logger.debug('Registering device: ' +  item!.adapterId)
+                // register device
                 const td = await getTd(item?.adapterId)
-                // console.log(JSON.stringify(td))
+                // console.log(JSON.stringify(td, null, 2))
                 const response = await agent.postRegistration({ td })
-                console.log(response)
+                logger.debug('Response: ' + JSON.stringify(response, null, 2))
                 if (response.statusCode === 201) {
-                    console.log('OID: ' + response.message![0].oid + '\t' +  item!.adapterId)
+                    logger.debug('OID: ' + response.message![0].oid + '\t' +  item!.adapterId)
                     // Add to map
                     oidToAdapterId.set(response.message![0].oid, item!.adapterId)
                 } else {
-                    console.log('Device registration failed', item?.adapterId)
+                    logger.error('Device registration failed: ' + String(item?.adapterId))
                 }
             } 
         }

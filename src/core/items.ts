@@ -54,10 +54,11 @@ export const getTd = async (adapterId: string) => {
 }
 
 export const getPropertyValue: any = async (oid: string, propertyId: string) => {
-        console.log(oidToAdapterId.values())
+        // console.log(oidToAdapterId.values())
         const adapterId = oidToAdapterId.get(oid)
         if (!adapterId) {
-            console.log('AdapterId not found')
+            // console.log('AdapterId not found')
+            logger.error('AdapterId not found')
                 throw new MyError('Item not found', HttpStatusCode.NOT_FOUND)
         }
         const td = TDs.get(adapterId)

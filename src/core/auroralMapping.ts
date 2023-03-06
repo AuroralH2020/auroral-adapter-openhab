@@ -1,4 +1,3 @@
-import errorHandler from 'errorhandler'
 import * as fs from 'fs'
 import { Config } from '../config'
 
@@ -21,9 +20,15 @@ class Mapping {
         Object.entries(typesObject).forEach(([key, value]) => {
             this.typeMapping.set(key, value as string)
         })
+          // Load units
+          const unitsObject = JSON.parse(fs.readFileSync(Config.HOME_PATH +  '/src/mappings/units.json', 'utf8'))
+          Object.entries(unitsObject).forEach(([key, value]) => {
+              this.unitMapping.set(key, value as string)
+          })
     }
     public propertyMapping: Map<string, string> = new Map<string, string>()
     public typeMapping: Map<string, string> = new Map<string, string>()
+    public unitMapping: Map<string, string> = new Map<string, string>()
 }
 
 export const mapping = Mapping.getInstance()

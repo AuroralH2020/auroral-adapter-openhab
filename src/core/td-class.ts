@@ -5,7 +5,7 @@ import { mapping } from './auroralMapping'
 
 export type wotTD = { 
     adapterId: string, 
-    '@context': string[]
+    '@context': any
     title: string, 
     properties: { [x: string]: WotProperty } 
     '@type': string
@@ -16,8 +16,8 @@ export type wotTD = {
 export type WotProperty = {
     title: string
     type?: string
-    monitors: string
-    measures?: string
+    '@type': string
+    unit?: string
     forms?: { 
         op: string[],
         href: string
@@ -31,7 +31,7 @@ export type Property = {
     name: string
     type?: string
     monitors: string
-    measures?: string
+    unit?: string
     form: { 
         op: string[],
         href: string
@@ -77,7 +77,7 @@ export class TD {
                     op: [
                         'readproperty'
                     ],
-                    href: 'http://192.168.0.150:8080/rest/items/' + item.name + '/state'
+                    href: 'http filled in agent'
                 }
             }
             // Extract semantics
@@ -102,19 +102,27 @@ export class TD {
             // readonly?
             prop.readOnly = true // For now all read only
             // Extract pattern
-            if (item.stateDescription && item.stateDescription.options && item.stateDescription.options.length > 0) {
+            // console.log(item)
+            if (item.stateDescription && item.stateDescription.pattern) {
                 prop.pattern = item.stateDescription.pattern
             }
-            // Extract measures from pattern
+            // Extract unit from pattern
             if (prop.pattern) {
                 if (prop.pattern.includes('%unit%')) {
                     const stateArray = item.state.split(' ')
-                    prop.measures = stateArray.length > 0 ? stateArray[1] : undefined
+                    const ohUnit = stateArray.length > 0 ? stateArray[1] : undefined
+                    // Convert OH unit to AURORAL unit
+                    if (ohUnit) {
+                        prop.unit = mapping.unitMapping.get(ohUnit)
+                        if (!prop.unit) {
+                            logger.warn(`Unit ${ohUnit} not found in mapping`)
+                        }
                 }
             }
             this.propertiesMap.set(item.name, prop)
         }
     }
+}
 
     // Extract valid property according WoT standard
     public getWoTProperties(): { [x: string]: WotProperty } {
@@ -126,8 +134,8 @@ export class TD {
                 properties[key] = {
                     title: prop.name,
                     type: prop.type, 
-                    monitors: prop.monitors,
-                    measures: prop.measures,
+                    '@type': prop.monitors,
+                    unit: prop.unit,
                     forms: [{ 
                         op: prop.form.op,
                         href: prop.form.href
@@ -144,8 +152,12 @@ export class TD {
             adapterId: this.adapterId,
             '@context': [
                 'https://www.w3.org/2019/wot/td/v1',
-                'https://w3c.github.io/wot-discovery/context/discovery-context.jsonld'
-            ], 
+                { 
+                 'adp': 'https://auroral.iot.linkeddata.es/def/adapters#',
+                 'om': 'http://www.ontology-of-units-of-measure.org/resource/om-2/',
+                 'geo': 'http://www.w3.org/2003/01/geo/wgs84_pos#'
+                }
+              ],
             title: this.name,
             '@type': this.type,
             security: ['nosec_sc'],

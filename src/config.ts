@@ -14,6 +14,7 @@ export const Config = {
 	NODE_ENV: process.env.NODE_ENV!,
 	IP: process.env.ADAPTER_IP!,
 	PORT: process.env.ADAPTER_PORT!,
+	OPENHAB_ADAPTER_URL: process.env.OPENHAB_ADAPTER_URL || '<this_adapter_url>',
 	OPENHAB: {
 		URL: process.env.OPENHAB_URL || 'http://localhost:8080',
 		TOKEN: process.env.OPENHAB_TOKEN || 'secrettoken'
