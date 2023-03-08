@@ -1,8 +1,3 @@
-<!-- ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/AuroralH2020/auroral-gateway-js)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/AuroralH2020/auroral-gateway-js)
-![GitHub issues](https://img.shields.io/github/issues-raw/AuroralH2020/auroral-gateway-js)
-![GitHub](https://img.shields.io/github/license/AuroralH2020/auroral-gateway-js)
-[![Quality Gate Status](https://sonar.bavenir.eu/api/project_badges/measure?project=auroral-js-gateway&metric=alert_status&token=squ_209c86b285af7fe433b94e069c3b5794302fe13b)](https://sonar.bavenir.eu/dashboard?id=auroral-js-gateway) -->
 # AURORAL Openhab Adapter #
 
 Adapter to integrate Openhab platform into AURORAL
@@ -13,27 +8,23 @@ Recommended software and skills:
 
 - GIT
 - Docker
-- Docker compose 
 
-<!-- ## Dependencies ##
+## Cofiguration ##
+- AURORAL NODE configuration:
+    - ADAPTER_MODE: proxy
+    - ADAPTER_HOST: http://<IP/DNS_of_the_adapter>
+    - ADAPTER_PORT: 3002
+    - USE_MAPPING: true
 
-AURORAL Node Gateway is a part of the AURORAL Node, which is a client to connect IoT infrastructures with AURORAL.
-
-For minimal functionality, the AURORAL Gateway needs an instance of the AURORAL Agent and an instance of REDIS db.
-
-In order to access an IoT infrastructure or platform, it is necessary to run an AURORAL Adapter.
-
-Examples and more information about how to run the AURORAL Node Agent is available in the [AURORAL Node repository](https://github.com/AuroralH2020/auroral-node/wiki).
-
-## Deployment ##
-
-It is possible to run the AURORAL Node Gateway as a docker image.
-
-Refer to [AURORAL Node repository](https://github.com/AuroralH2020/auroral-node/wiki) for more information about deployment.
-
-## Images ##
-
-Available DOCKER images for AMD64, ARM64 and ARM7 architectures. -->
+- enviroment file:
+    - OPENHAB_URL: URL of the Openhab server
+    - OPENHAB_TOKEN: [API token](https://www.openhab.org/docs/configuration/apitokens.html) of the Openhab server   
+- mappings:
+    - Openhab uses different semantic descriptions than AURORAL. There is a mapping file to translate the Openhab semantic to AURORAL semantic. The mapping file is located in the folder `src/mappings` and consists of three files:
+        - `property.json`: mapping of Openhab semantic to AURORAL property type
+        - `thingType`: mapping of Openhab thing type to AURORAL device type
+        - `units.json`: mapping of Openhab unit to AURORAL unit
+    - all of them already contains some mappings defined by us but you can add your own mappings (and also pull request this repository)
 
 ### Who do I talk to? ###
 

@@ -19,10 +19,6 @@ export const Config = {
 		URL: process.env.OPENHAB_URL || 'http://localhost:8080',
 		TOKEN: process.env.OPENHAB_TOKEN || 'secrettoken'
 	},
-	HASS: {
-		URL: process.env.HASS_URL || 'http://localhost:8080',
-		TOKEN: process.env.HASS_TOKEN || 'secrettoken'
-	},
 	AGENT: {
 		URL: process.env.AGENT_URL! || 'http://localhost:81',
 		TIMEOUT: process.env.AGENT_TIMEOUT || 30000
